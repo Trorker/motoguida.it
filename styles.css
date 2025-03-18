@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+
+html,
+body {
+    font-size: 16px;
+
+    box-sizing: border-box;
+
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.bg {
+    background: url("background-tiny.jpg") no-repeat center fixed;
+    background-image: linear-gradient(90deg, rgb(0 0 0 / 100%), rgb(0 0 0 / 50%)), url(background-tiny.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.content {
+    padding: 2rem;
+    padding-top: clamp(2rem, 25vh, 15rem);
+
+    color: white;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    width: max(50vw, 1440px);
+    margin: 0 auto;
+}
+
+hgroup h1 {
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px green, -2px -2px 4px green;
+}
+
+hgroup p {
+    margin-top: 0;
+    color: #a0a0a0;
+}
+
+.code {
+    line-height: clamp(0.5em, 1.5vw, 0.6em);
+    overflow-y: hidden;
+}
+
+.type {
+    white-space: nowrap;
+    font-size: clamp(0.5em, 1.5vw, 0.6em);
+    font-family: monospace;
+    color: #0000;
+    background:
+        linear-gradient(-90deg, green 2px, #0000 0) 2px 0,
+        linear-gradient(#535353 0 0) 0 0;
+    background-size: calc(var(--n)*1ch) 200%;
+    -webkit-background-clip: padding-box, text;
+    background-clip: padding-box, text;
+    background-repeat: no-repeat;
+    animation:
+        blink-caret .7s infinite steps(1),
+        typing calc(var(--n)*.2s) steps(var(--n)) forwards;
+}
+
+@keyframes typing {
+    from {
+        background-size: 0 200%
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        background-position: 0 -100%, 0 0
+    }
+}
+
+footer {
+    width: 100%;
+    color: lightgray;
+    font-size: clamp(0.45rem, 2.5vw, 0.8rem);
+
+    position: fixed;
+    bottom: 0;
+    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /*flex-wrap: wrap;*/
+}
+
+footer span {
+    padding: 1rem;
+}
+
+footer .unsplash {
+    text-align: right;
+}
+
+footer a {
+    color: lightgray;
+}
